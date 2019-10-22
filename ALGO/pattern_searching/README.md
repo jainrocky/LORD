@@ -13,6 +13,12 @@
 * Best & Avg case `O(N+M)`
 * Worst case `O(N*M)` when spurious hit(hash value matches but pattern not matches) and only last character of text is not matched with a given pattern
 
+## finite_automata
+
+* Best & Avg & Worst `O(N)` (for searching)
+* `O(256 * M<sup>3</sup>)` (for building transition table)
+
 ## KMP
 
 * Best & Avg & Worst case `O(N)`
+
