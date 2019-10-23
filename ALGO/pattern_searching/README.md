@@ -16,7 +16,7 @@
 ## finite_automata
 
 * Best & Avg & Worst `O(N)` (for searching)
-* `O(256 * M<sup>3</sup>)` (for building transition table)
+* O(256 * M<sup>3</sup>) (for building transition table)
 
 ## KMP
 
