@@ -1,8 +1,11 @@
 import os, sys, warnings
 inf = 2**31
 
+'''
+    By default Source vertex is zero
+'''
 def least_cost_u_to_all(matrix, src=0):
-
+    
     def least_cost_node(visited, cost):
         least_cost, vertex = inf, None
         for u in range(len(cost)):
@@ -16,7 +19,8 @@ def least_cost_u_to_all(matrix, src=0):
     cost = [inf]*n_node
     parent = [None]*n_node
 
-    cost[src]=0
+    ''' Cost for path from SOURCE to SOURCE is zero'''
+    cost[src]=0  
 
     for i in range(n_node):
         u = least_cost_node(visited, cost)
@@ -34,6 +38,7 @@ if __name__=='__main__':
     from graph import Graph
 
     g = Graph(5, adjacency='matrix')
+    
     g.add_edge(Graph.Edge( 0, 1, 2 ))
     g.add_edge(Graph.Edge( 0, 3, 6 ))
     g.add_edge(Graph.Edge( 1, 0, 2 ))
