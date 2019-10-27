@@ -20,5 +20,8 @@
 
 ## KMP
 
+- KMP algorithm preprocesses `pattern` and constructs an auxiliary `lps` of size m (same as size of pattern) which is used to skip characters while matching.
+- name lps indicates longest proper prefix which is also suffix.. 
+
 * Best & Avg & Worst case `O(N)`
 

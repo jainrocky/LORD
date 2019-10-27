@@ -31,7 +31,7 @@ class Graph:
                 elif self.adjacency == 'list':
                     if not self.list[edge.uid]:
                         self.list[edge.uid]=[]
-                    self.list[edge.uid].append(edge.vid)
+                    self.list[edge.uid].append((edge.vid, edge.weight))
                 else:
                     raise ValueError
             else:
