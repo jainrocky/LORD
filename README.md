@@ -2,11 +2,11 @@
 
 ## Content
 
-### dp
+### Dynamic Programming
 * [bellman_ford__u_to_all_matrix.py](/ALGO/graph/dp__bellman_ford__u_to_all_matrix.py)
 
-### gy
+### Greedy Algorithms
 * [dijkstra__u_to_all_matrix.py](/ALGO/graph/gy__dijkstra__u_to_all_matrix.py)
 
-### misc
+### Miscellaneous
 * [kmp__pattern_search.py](/ALGO/pattern_searching/kmp__pattern_search.py)

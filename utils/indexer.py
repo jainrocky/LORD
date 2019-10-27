@@ -4,6 +4,7 @@ algo_chart={
     'gy': 'Greedy Algorithms',
     'dp': 'Dynamic Programming',
     'ne': 'Naive Approach',
+    'ms': 'Miscellaneous'
     }
 
 if __name__=='__main__':
@@ -13,7 +14,7 @@ if __name__=='__main__':
     sys.path.append(ds_path)
     from pattern_searching.kmp__pattern_search import find_all
 
-    algo_content = {'misc': []}
+    algo_content = {'ms': []}
 
     
     for i, walk in enumerate(os.walk(algo_path)):
@@ -28,7 +29,7 @@ if __name__=='__main__':
                             algo_content[q[0]] = []
                         algo_content[q[0]].append('[{}]({})'.format(f[4:], walk[0].split('..')[1].replace('\\', '/')+ '/' + f))
                     else:
-                        algo_content['misc'].append('[{}]({})'.format(f, walk[0].split('..')[1].replace('\\', '/')+ '/' + f))
+                        algo_content['ms'].append('[{}]({})'.format(f, walk[0].split('..')[1].replace('\\', '/')+ '/' + f))
             
                     
 
@@ -38,7 +39,7 @@ if __name__=='__main__':
         ind = find_all(pattern, text)
         f.seek(ind[0]+len(pattern)+2)
         for k in sorted(algo_content):
-            f.write('\n\n### '+k)
+            f.write('\n\n### '+algo_chart[k])
             for name in algo_content[k]:
                 f.write('\n* '+name)
                 
