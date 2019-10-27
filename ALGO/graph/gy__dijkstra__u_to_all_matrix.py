@@ -6,14 +6,6 @@ inf = 2**31
 '''
 def least_cost_u_to_all(matrix, src=0):
     
-    def least_cost_node(visited, cost):
-        least_cost, vertex = inf, None
-        for u in range(len(cost)):
-            if not visited[u]:
-                if cost[u] <= least_cost:
-                    least_cost, vertex = cost[u], u
-        return vertex
-    
     n_node = len(matrix)
     visited = [False]*n_node
     cost = [inf]*n_node
@@ -30,6 +22,15 @@ def least_cost_u_to_all(matrix, src=0):
                 if ( cost[u] + matrix[u][v] ) < cost[v]:
                     cost[v], parent[v] = cost[u] + matrix[u][v], u
         visited[u]=True
+
+    def least_cost_node(visited, cost):
+        least_cost, vertex = inf, None
+        for u in range(len(cost)):
+            if not visited[u]:
+                if cost[u] <= least_cost:
+                    least_cost, vertex = cost[u], u
+        return vertex
+    
     return cost, parent
 
 

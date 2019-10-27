@@ -26,7 +26,7 @@ def find_all(pattern, text):
         if j == m:
             pos.append(i-m)
             j = lps[m-1]
-        if text[i] is not pattern[j]:
+        elif text[i] is not pattern[j]:
             if j > 0:
                 j = lps[j-1]
             else:
