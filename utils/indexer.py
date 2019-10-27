@@ -26,9 +26,9 @@ if __name__=='__main__':
                     if len(q)>2 and q[0] in algo_chart:
                         if q[0] not in algo_content:
                             algo_content[q[0]] = []
-                        algo_content[q[0]].append('[{}]({})'.format(f[4:], '..'+walk[0].split('..')[1]+'\\'+f))
+                        algo_content[q[0]].append('[{}]({})'.format(f[4:], os.path.join(walk[0].split('..')[1], f)))
                     else:
-                        algo_content['misc'].append('[{}]({})'.format(f, '..'+walk[0].split('..')[1]+'\\'+f))
+                        algo_content['misc'].append('[{}]({})'.format(f, os.path.join(walk[0].split('..')[1], f)))
             
                     
 
@@ -40,7 +40,7 @@ if __name__=='__main__':
         for k in sorted(algo_content):
             f.write('\n\n### '+k)
             for name in algo_content[k]:
-                f.write('\n#### '+name)
+                f.write('\n* '+name)
                 
     print('Update Successfully!')
                 
