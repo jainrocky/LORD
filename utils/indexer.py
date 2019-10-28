@@ -5,6 +5,7 @@ algo_chart={
     'dp': 'Dynamic Programming',
     'ne': 'Naive Approach',
     'ms': 'Miscellaneous'
+    'dc': 'Divide & Conquer'
     }
 
 if __name__=='__main__':
