@@ -10,3 +10,4 @@
 
 ### Miscellaneous
 * [kmp__pattern_search.py](/ALGO/pattern_searching/kmp__pattern_search.py)
+* [rabin_karp__pattern_search.py](/ALGO/pattern_searching/rabin_karp__pattern_search.py)

@@ -4,8 +4,8 @@ algo_chart={
     'gy': 'Greedy Algorithms',
     'dp': 'Dynamic Programming',
     'ne': 'Naive Approach',
-    'ms': 'Miscellaneous'
-    'dc': 'Divide & Conquer'
+    'ms': 'Miscellaneous',
+    'dc': 'Divide & Conquer',
     }
 
 if __name__=='__main__':
