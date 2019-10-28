@@ -24,7 +24,7 @@ def find_max_value(w, v, capacity):
 
                 
 if __name__ == '__main__':
-    w = [10, 20, 30, 342, 124, 214, 124, 6547, 54, 43, 436, 14, 14, 412, 14] # finite number of items(item can be take only once)
+    w = [10, 20, 30, 342, 124, 214, 124, 6547, 54, 43, 436, 14, 14, 412, 14] # finite number of items(item can be taken only once)
     v = [60, 100, 120, 321, 131, 24, 424, 352, 2, 12341, 21, 15, 25, 15125, 3234]
     capacity = 5000
     max_value, bag = find_max_value(w, v, capacity)
