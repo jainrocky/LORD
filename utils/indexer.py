@@ -25,7 +25,7 @@ if __name__=='__main__':
             for f in files:
                 if f[-3:]=='.py':
                     q = f.split('__')
-                    if len(q)>2 and q[0] in algo_chart:
+                    if q[0] in algo_chart:
                         if q[0] not in algo_content:
                             algo_content[q[0]] = []
                         algo_content[q[0]].append('[{}]({})'.format(f[4:], walk[0].split('..')[1].replace('\\', '/')+ '/' + f))
