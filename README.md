@@ -4,6 +4,7 @@
 
 ### Dynamic Programming
 * [0_1_knapsack.py](/ALGO/dynamic_programming/dp__0_1_knapsack.py)
+* [binomial_coefficient.py](/ALGO/dynamic_programming/dp__binomial_coefficient.py)
 * [longest_common_subsequence.py](/ALGO/dynamic_programming/dp__longest_common_subsequence.py)
 * [matrix_chain_multiplication.py](/ALGO/dynamic_programming/dp__matrix_chain_multiplication.py)
 * [optimal_binary_search_tree.py](/ALGO/dynamic_programming/dp__optimal_binary_search_tree.py)
