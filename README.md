@@ -2,6 +2,9 @@
 
 ## Content
 
+### Divide & Conquer
+* [merge_sort.py](/ALGO/sorting/dc__merge_sort.py)
+
 ### Dynamic Programming
 * [0_1_knapsack.py](/ALGO/dynamic_programming/dp__0_1_knapsack.py)
 * [binomial_coefficient.py](/ALGO/dynamic_programming/dp__binomial_coefficient.py)
@@ -13,6 +16,7 @@
 
 ### Greedy Algorithms
 * [dijkstra__u_to_all_matrix.py](/ALGO/graph/gy__dijkstra__u_to_all_matrix.py)
+* [fractional_knapsack.py](/ALGO/greedy/gy__fractional_knapsack.py)
 
 ### Miscellaneous
 * [kmp__pattern_search.py](/ALGO/pattern_searching/kmp__pattern_search.py)
