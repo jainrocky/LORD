@@ -5,6 +5,14 @@ inf = 2**31
     By default Source vertex is zero
 '''
 def least_cost_u_to_all(matrix, src=0):
+
+    def least_cost_node(visited, cost):
+        least_cost, vertex = inf, None
+        for u in range(len(cost)):
+            if not visited[u]:
+                if cost[u] <= least_cost:
+                    least_cost, vertex = cost[u], u
+        return vertex
     
     n_node = len(matrix)
     visited = [False]*n_node
@@ -23,13 +31,6 @@ def least_cost_u_to_all(matrix, src=0):
                     cost[v], parent[v] = cost[u] + matrix[u][v], u
         visited[u]=True
 
-    def least_cost_node(visited, cost):
-        least_cost, vertex = inf, None
-        for u in range(len(cost)):
-            if not visited[u]:
-                if cost[u] <= least_cost:
-                    least_cost, vertex = cost[u], u
-        return vertex
     
     return cost, parent
 
@@ -47,7 +48,7 @@ if __name__=='__main__':
     g.add_edge(Graph.Edge( 1, 3, 8 ))
     g.add_edge(Graph.Edge( 1, 4, 5 ))
     g.add_edge(Graph.Edge( 2, 1, 3 ))
-    g.add_edge(Graph.Edge( 2, 4, 7 ))
+    g.add_edge(Graph.Edge( 2, 4 ))
     g.add_edge(Graph.Edge( 3, 0, 6 ))
     g.add_edge(Graph.Edge( 3, 1, 8 ))
     g.add_edge(Graph.Edge( 3, 4, 9 ))

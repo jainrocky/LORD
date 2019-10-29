@@ -7,7 +7,7 @@ if __name__=='__main__':
     g = Graph(5, adjacency='list')
     g.add_edge(Graph.Edge( 0, 1, 22 ))
     g.add_edge(Graph.Edge( 1, 2, 12 ));
-    g.add_edge(Graph.Edge( 2, 4, 45 ));
+    g.add_edge(Graph.Edge( 2, 4 ));
     g.add_edge(Graph.Edge( 2, 3, 45 ));
     g.add_edge(Graph.Edge( 4, 0, 45 ));
     g.add_edge(Graph.Edge( 1, 3, 21 ));
@@ -20,7 +20,8 @@ if __name__=='__main__':
               (20, 10),
               (30, 20))
     '''if not points then make graph with random points'''
-    g.draw(points)
+    g.print()
+##    g.draw(points)
     
     
     

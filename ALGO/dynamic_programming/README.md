@@ -31,3 +31,12 @@ Given two sequences(let say x and y), find the length of longest subsequence pre
 `n <- Number of keys`
 - Wosrt/Avg/Best -case: `O(n^3)`
 
+## Binomial coefficient 
+
+To fill the table upto **nth coefficient**
+- `O(n*n)`
+
+After filling table each query for each coeffiecient( < n) required
+- `O(1)`
+
+

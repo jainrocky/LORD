@@ -30,7 +30,12 @@ Key Points:
 - The graph may contain negative weight edges.
 - Dijkstra’s algorithm is a Greedy algorithm and time complexity is O(VLogV) (with the use of min heap). 
 - Dijkstra doesn’t work for Graphs with negative weight edges
-- Bellman-Ford works for such graphs.
+- But doesn't work with negative cycles
 - But time complexity of Bellman-Ford is `O(VE)`, which is more than Dijkstra.
 
+## Floyd Warshall Algorithm
 
+- The problem is to find shortest distances between every pair of vertices in a given edge weighted directed Graph.
+- work with negative edges, but doesn't work with negative cycles
+
+- `O(V^3)`

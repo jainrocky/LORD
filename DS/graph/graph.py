@@ -1,9 +1,10 @@
 import sys, os, warnings
+inf = 2**31
 
 class Graph:
     class Edge:
-        def __init__(self, u, v, w=1):
-            self.uid, self.vid, self.weight=u, v, w        
+        def __init__(self, u, v, w=inf):
+            self.uid, self.vid, self.weight = u, v, w        
 
     def __init__(self, n_node, edges=None, adjacency='matrix'):
         self.n_node=n_node
@@ -16,7 +17,9 @@ class Graph:
         
     def build_matrix(self):
         if self.adjacency == 'matrix':
-            self.matrix = [[0] * self.n_node for i in range(self.n_node)]
+            self.matrix = [[inf] * self.n_node for i in range(self.n_node)]
+            for i in range(self.n_node):
+                self.matrix[i][i]=0
         elif self.adjacency == 'list':
             self.list = [[]] * self.n_node
         else:
@@ -89,4 +92,5 @@ if __name__=='__main__':
             else:
                 g.add_edge(edge = Graph.Edge( *map( int, line.split(' ') ) ) )
         g.print(30)
+        
     
