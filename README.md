@@ -15,6 +15,7 @@
 * [floyd_warshall__all_pair_shortest_path](/ALGO/graph/dp__floyd_warshall__all_pair_shortest_path.py)
 
 ### Greedy Algorithms
+* [dijkstra__u_to_all_list](/ALGO/graph/gy__dijkstra__u_to_all_list.py)
 * [dijkstra__u_to_all_matrix](/ALGO/graph/gy__dijkstra__u_to_all_matrix.py)
 * [fractional_knapsack](/ALGO/greedy/gy__fractional_knapsack.py)
 * [huffman_encoding](/ALGO/greedy/gy__huffman_encoding.py)

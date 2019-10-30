@@ -17,15 +17,16 @@ class BinaryHeapTree:
             for i in range(self.len):
                 temp[i]=self.tree[i]
             self.tree  = temp
+            
         self.tree[self.len] = val
         child_i=self.len
         parent_i  = self.parent(child_i)
-        self.len += 1
+        self.len += 1            
         while child_i > 0 and not self.cmp(self.tree[parent_i] , self.tree[child_i]): # Custom or default Compare function
-            self.tree[parent_i], self.tree[child_i] = self.tree[child_i], self.tree[parent_i]
+            self.tree[parent_i], self.tree[child_i],  = self.tree[child_i],  self.tree[parent_i]
             child_i  = parent_i
             parent_i = self.parent(child_i)
-
+                 
     def remove(self):
         removed=None
         if self.len > 0:
@@ -38,6 +39,8 @@ class BinaryHeapTree:
             left_i  = self.left(parent_i)
             right_i = self.right(parent_i)
             temp_i=None
+            
+            ''' Check if new root node(last node of complete binary tree) is satisfiy **cmp** or not '''
             while left_i < self.len or  right_i < self.len :
                 temp_i = left_i if left_i < self.len   and not self.cmp(self.tree[parent_i], self.tree[left_i]) else parent_i # Custom or default Compare function
                 temp_i = right_i if right_i < self.len and not self.cmp(self.tree[temp_i],  self.tree[right_i]) else temp_i # Custom or default Compare function
@@ -49,7 +52,9 @@ class BinaryHeapTree:
                 left_i = self.left(parent_i)
                 right_i = self.right(parent_i)
         return removed
-
+    
+    def root(self):
+        return self.tree[0] if self.len>0 else None
     def exist(self):
         return self.len > 0
     def left(self, i):
@@ -65,6 +70,7 @@ if __name__=='__main__':
     tree.insert(23)
     tree.insert(4)
     tree.insert(42)
+    tree.insert(21)
     tree.insert(235)
     tree.insert(2352)
     tree.insert(2131)
@@ -76,25 +82,29 @@ if __name__=='__main__':
     tree.insert(11232)
     tree.insert(21)
     tree.insert(22342)
+
+    
     while tree.exist():
         print(tree.remove())
-        
-    print('\n', '*'*20, 'More Use Cases', '*'*20)
-    print('Example-1\n')
-    data = ((12, 24),
-            (124, 12),
-            (123, 12),
-            (213, 4214),
-            (24, 654),)
-    ex1 = BinaryHeapTree(data=data, cmp = lambda parent, child: parent[1] > child[1])
-    while ex1.exist():
-        print(ex1.remove())
+    
+    more = True
+    if more:
+        print('\n', '*'*20, 'More Use Cases', '*'*20)
+        print('Example-1\n')
+        data = ((12, 24),
+                (124, 12),
+                (123, 12),
+                (213, 4214),
+                (24, 654),)
+        ex1 = BinaryHeapTree(data=data, cmp = lambda parent, child: parent[1] > child[1])
+        while ex1.exist():
+            print(ex1.remove())
 
-    print('\nExample-2\n')
-    data = ['a', 'v', 'd', 'm', 'r', 'c', 'p', 'u', 'e', 'q', 's']
-    ex2 = BinaryHeapTree(data=data, cmp=lambda a, b: a<b)
-    while ex2.exist():
-        print(ex2.remove())
+        print('\nExample-2\n')
+        data = ['a', 'v', 'd', 'm', 'r', 'c', 'p', 'u', 'e', 'q', 's']
+        ex2 = BinaryHeapTree(data=data, cmp=lambda a, b: a<b)
+        while ex2.exist():
+            print(ex2.remove())
 
 
 

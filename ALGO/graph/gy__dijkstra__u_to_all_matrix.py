@@ -56,17 +56,18 @@ if __name__=='__main__':
     g.add_edge(Graph.Edge( 4, 2, 7 ))
     g.add_edge(Graph.Edge( 4, 3, 9 ))
 
-    src_vertex=3
+    src_vertex=0
     c, p = least_cost_u_to_all(g.matrix, src=src_vertex)
     
     for i in range(len(p)):
         print('Parent of vertex', i, '<-', p[i], 'and distance from', src_vertex, 'to', i, 'is', c[i])
-        
-    g.draw(points = ((10, 10),
-              (10, 30),
-              (20, 30),
-              (20, 10),
-              (30, 20)))
+
+    if False:    
+        g.draw(points = ((10, 10),
+                  (10, 30),
+                  (20, 30),
+                  (20, 10),
+                  (30, 20)))
 
 
         

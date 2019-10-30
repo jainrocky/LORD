@@ -12,6 +12,8 @@ class PriorityQueue(BinaryHeapTree):
         self.insert(val)
     def pop(self):
         return self.remove()
+    def front(self):
+        return self.root()
     def empty(self):
         return self.exist() == 0
     
@@ -23,5 +25,7 @@ if __name__=='__main__':
     pq.push(-123)
     pq.push(-13)
     pq.push(-90)
+    
     while not pq.empty():
         print(pq.pop())
+    

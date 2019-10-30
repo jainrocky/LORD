@@ -19,7 +19,9 @@ Key Points:
 
 - `O(V^2)`
 
-### Using Ajacency list & min heap
+### Using Ajacency list & PriorityQueue(BinaryMinHeap)
+
+- `O((E+V)log(E+V))`
 
 ## Bellman-Ford Algorithm
 
