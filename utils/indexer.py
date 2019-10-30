@@ -28,9 +28,9 @@ if __name__=='__main__':
                     if q[0] in algo_chart:
                         if q[0] not in algo_content:
                             algo_content[q[0]] = []
-                        algo_content[q[0]].append('[{}]({})'.format(f[4:], walk[0].split('..')[1].replace('\\', '/')+ '/' + f))
+                        algo_content[q[0]].append('[{}]({})'.format(f[4:-3], walk[0].split('..')[1].replace('\\', '/')+ '/' + f))
                     else:
-                        algo_content['ms'].append('[{}]({})'.format(f, walk[0].split('..')[1].replace('\\', '/')+ '/' + f))
+                        algo_content['ms'].append('[{}]({})'.format(f[:-3], walk[0].split('..')[1].replace('\\', '/')+ '/' + f))
             
                     
 

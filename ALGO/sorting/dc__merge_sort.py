@@ -26,7 +26,7 @@ def merge(item, l, m, r, cmp):
         item[k]=right[j]
         j, k =j+1, k+1
 
-def merge_sort(item, begin, end, cmp=lambda a, b: a<b):
+def merge_sort(item, begin, end, cmp=lambda first, second: first < second):
     def sort(item, l, r):
         if l<r:
             m = (l+r)//2
@@ -40,5 +40,5 @@ def merge_sort(item, begin, end, cmp=lambda a, b: a<b):
 if __name__=='__main__':
     item = [(23, 4), (234 , 34), (34, 223), (1, 43)]
     print(*item)
-    merge_sort(item, 0, len(item)-1, cmp=lambda a, b: a[0] > b[0] )
+    merge_sort(item, begin=0, end=len(item)-1, cmp=lambda a, b: a[0] > b[0] ) # non-decreasing order by first element of tuple
     print(*item)

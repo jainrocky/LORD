@@ -9,3 +9,9 @@ Given weights and values of n items, we need to put these items in a knapsack of
 - `n <- Number of items`
 - `O(n)` if already sorted in non increasing order(by value to weight ratio) else
 - `O(nlog(n))`
+
+## Huffman Encoding
+
+- `n <- Number of elements`
+
+- O(nlog(n))
