@@ -3,7 +3,6 @@ sys.path.append(os.path.join( os.path.dirname( __file__ ), '..',  '..', 'DS', 'g
 sys.path.append(os.path.join( os.path.dirname( __file__ ), '..',  '..', 'DS', 'queue'))
 from graph import Graph
 from priority_queue import PriorityQueue
-
 inf=2**31
 
 
@@ -17,8 +16,8 @@ def minimum_spanning_tree(l):
     def cmp(a,b):
         if a[1]<b[1]:
             return True
-        elif a[1]==b[1] and a[0]<b[0]:
-            return True
+##        elif a[1]==b[1] and a[0]<b[0]:
+##            return True
         else:
             return False
     pq = PriorityQueue(priority=cmp)
@@ -66,13 +65,14 @@ if __name__=='__main__':
 ##    g.add_edge( Graph.Edge( 4, 2, 7 ) )
     g.add_edge( Graph.Edge( 4, 3, 9 ) )
 
-    g.draw(points)
+    
     mst = minimum_spanning_tree(g.list)
     gnew = Graph(n_node=5)
     
     for c in mst:
         print( c[2], '___', c[0], '->', c[1])
         gnew.add_edge(Graph.Edge( c[2], c[0], c[1] ) )
-    gnew.draw(points)
+    g.draw(points, title='GRAPH')
+    gnew.draw(points, title='MST')
 
     

@@ -21,7 +21,7 @@ if __name__=='__main__':
               (30, 20))
     '''if not points then make graph with random points'''
     g.print()
-##    g.draw(points)
+    g.draw(points)
     
     
     

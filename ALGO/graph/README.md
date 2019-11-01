@@ -21,7 +21,7 @@ Key Points:
 
 ### Using Ajacency list & PriorityQueue(BinaryMinHeap)
 
-- `O((E+V)log(E+V))`
+- `O((E+V)log(V))`
 
 ## Bellman-Ford Algorithm
 
@@ -40,3 +40,14 @@ Key Points:
 - work with negative edges, but doesn't work with negative cycles
 
 - `O(V^3)`
+
+## Prims Minimum spanning tree
+
+- Given a connected and undirected graph, a spanning tree of that graph is a subgraph that is a tree and connects all the vertices together. 
+- A single graph can have many different spanning trees.
+
+- `O((E+V)log(V))`
+
+## Kruskal Minimum spanning tree
+
+- `O(Elog(E))`

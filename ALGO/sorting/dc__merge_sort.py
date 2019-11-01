@@ -39,7 +39,6 @@ def merge_sort(item, begin, end, visualise=None, cmp=lambda first, second: first
             if cv2.waitKey(25) & 0xFF==ord('q'):
                 cv2.destroyAllWindows()
                 raise SystemExit
-            
     def sort(item, l, r):
         if l<r:
             m = (l+r)//2

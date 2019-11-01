@@ -62,7 +62,7 @@ if __name__=='__main__':
     for i in range(len(p)):
         print('Parent of vertex', i, '<-', p[i], 'and distance from', src_vertex, 'to', i, 'is', c[i])
 
-    if False:    
+    if True:    
         g.draw(points = ((10, 10),
                   (10, 30),
                   (20, 30),

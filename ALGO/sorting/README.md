@@ -1,1 +1,5 @@
-ECHO is on.
+## Sorting Algorithms
+
+# Merge sort
+
+- `O(nlog(n))`

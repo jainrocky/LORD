@@ -1,10 +1,12 @@
-import sys, os, warnings
+import sys, os, warnings, time
 inf = 2**31
 
 class Graph:
     class Edge:
         def __init__(self, u, v, w=inf):
-            self.uid, self.vid, self.weight = u, v, w        
+            self.uid, self.vid, self.weight = u, v, w
+        def __str__(self):
+            return str(self.uid)+'__'+str(self.weight)+'__'+str(self.vid)
 
     def __init__(self, n_node, edges=None, adjacency='matrix'):
         self.n_node=n_node
@@ -56,20 +58,20 @@ class Graph:
 
     
     
-    def draw(self, points=None, draw_n_edges=None):
-        warnings.warn('draw function required extra Modules such as numpy and matplotlib')
+    def draw(self, points=None, title=None, draw_n_edges=None):
+        warnings.warn('draw function required extra Modules such as numpy and matplotlib and OpenCV')
         try:
             import matplotlib.pyplot as plt
             import numpy as np
+            import cv2
         except:
             raise ImportError
         
         if not points:
             points = np.random.randint(0, self.n_node*10, size=(self.n_node, 2))
         if not draw_n_edges:
-            draw_n_edges=len(self.edges)
-            
-        ax=plt.axes()
+            draw_n_edges=len(self.edges)            
+        ax=plt.gca()
         for i, e in enumerate(self.edges[:draw_n_edges]):
             plt.plot([points[e.uid][0], points[e.vid][0]],
                     [points[e.uid][1], points[e.vid][1]])
@@ -79,8 +81,17 @@ class Graph:
         for i, p in enumerate(points):
             plt.text(p[0], p[1], i)
             ax.add_artist( plt.Circle(p, 0.2, color=np.random.rand(3)) )
+            if title:
+                plt.title(title)
         plt.show()
-    
+##        fig = plt.gcf()    
+##        fig.canvas.draw()
+##        plt.close()
+##        X = np.array(fig.canvas.renderer.buffer_rgba())
+##        cv2.imshow(str(time.time()), X)
+##        if cv2.waitKey(25) & 0xFF==ord('q'):
+##            cv2.destroyAllWindows()
+##            raise SystemExit
 
 
 if __name__=='__main__':
