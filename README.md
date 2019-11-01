@@ -17,6 +17,7 @@
 ### Greedy Algorithms
 * [dijkstra__u_to_all_list](/ALGO/graph/gy__dijkstra__u_to_all_list.py)
 * [dijkstra__u_to_all_matrix](/ALGO/graph/gy__dijkstra__u_to_all_matrix.py)
+* [prims_minimum_spanning_tree](/ALGO/graph/gy__prims_minimum_spanning_tree.py)
 * [fractional_knapsack](/ALGO/greedy/gy__fractional_knapsack.py)
 * [huffman_encoding](/ALGO/greedy/gy__huffman_encoding.py)
 

@@ -8,12 +8,14 @@ def least_cost_u_to_all(l, src=0):
 
     cost[src]=0
 
-    for i in range(n_node):
+    for i in range(n_node+1):
         for u, vset in enumerate(l):
             for v, uv_cost in vset:
-                if cost[u] + uv_cost < cost[v]:
+                if i < n_node and cost[u] + uv_cost < cost[v]:
                     cost[v], parent[v] = cost[u] + uv_cost, u
-
+                elif cost[u] + uv_cost < cost[v]:
+                    raise SystemExit('Negative Cycle Found!')
+                
     return cost, parent
 
 if __name__=='__main__':
@@ -31,7 +33,8 @@ if __name__=='__main__':
     g.add_edge( Graph.Edge( 3, 1, 1 ) )
     g.add_edge( Graph.Edge( 4, 3, -3 ) )
 
-    src_vertex=3
+
+    src_vertex=0
     c, p = least_cost_u_to_all(g.list, src=src_vertex)
     
     for i in range(len(p)):
