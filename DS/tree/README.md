@@ -10,5 +10,6 @@
 ## BinaryHeapTree
 `n <- Number of node in tree`
 
+- build-time `O(n)`
 - insert `O(log(n))` and `O(n)` if resize
 - remove `O(log(n))`
