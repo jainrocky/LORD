@@ -1,10 +1,10 @@
-import os, sys, random, time
-import matplotlib.pyplot as plt
-import cv2
-import numpy as np
+import os, sys, random, warnings
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..', 'utils'))
+from sorting_visualise import vis
 
-def merge_sort(item, begin, end, visualise=None, cmp=lambda first, second: first < second):    
-    def merge(item, l, m, r, cmp):
+
+def merge_sort(item, begin, end, visualise=None, condition=None):
+    def merge(l, m, r):
         n1 = m-l+1
         n2 = r-m
         left, right = [], []
@@ -15,7 +15,7 @@ def merge_sort(item, begin, end, visualise=None, cmp=lambda first, second: first
         i, j = 0, 0
         k=l
         while i<n1 and j<n2:
-            if cmp(left[i], right[j]):
+            if condition(left[i], right[j]):
                 item[k] = left[i]
                 i+=1
             else:
@@ -28,32 +28,30 @@ def merge_sort(item, begin, end, visualise=None, cmp=lambda first, second: first
         while j<n2:
             item[k]=right[j]
             j, k =j+1, k+1
-
         if visualise:
-            fig, ax = plt.subplots()
-            ax.bar(x= range(len(item)), height=item)
-            fig.canvas.draw()
-            plt.close()
-            X = np.array(fig.canvas.renderer.buffer_rgba())
-            cv2.imshow('Merge Sort', X)
-            if cv2.waitKey(25) & 0xFF==ord('q'):
-                cv2.destroyAllWindows()
-                raise SystemExit
-    def sort(item, l, r):
+            vis(item, 'Merge Sort', m)
+            
+    def sort(l, r):
         if l<r:
             m = (l+r)//2
-            sort(item, l, m)
-            sort(item, m+1, r)
-            merge(item, l, m, r, cmp)
-            
-    sort(item, begin, end)
+            sort(l, m)
+            sort(m+1, r)
+            merge(l, m, r)
+    if condition is None:
+        condition=lambda first, second: first < second
+    if visualise:
+        warnings.warn('Visualise, required extra Modules such as numpy and matplotlib and OpenCV')        
+    sort(begin, end)
+    if visualise:
+            vis(item, 'Merge Sort')
 
-    
 
 if __name__=='__main__':
     n = 100
     item=[None]*n
     for i in range(n):
         item[i] = random.random()*100
-    merge_sort(item, begin=0, end=len(item)-1, visualise=True, cmp=lambda a, b: a > b ) # non-decreasing order by first element of tuple
+    
+    merge_sort(item, begin=0, end=len(item)-1, visualise=True) # non-decreasing order by first element of tuple
+
     
