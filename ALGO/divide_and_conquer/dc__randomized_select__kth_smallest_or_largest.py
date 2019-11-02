@@ -2,7 +2,6 @@ import os, sys, random
 
 def kth_smallest(item, k):
     n = len(item)
-    
     if k<1:
         k=1
     elif k>n:
@@ -11,7 +10,6 @@ def kth_smallest(item, k):
     def rand_partition(begin, end):
         z = random.randint(begin, end)
         item[z], item[end] = item[end], item[z]
-        
         pivot = end
         i=begin
         j=begin
@@ -28,7 +26,6 @@ def kth_smallest(item, k):
             return begin
         p = rand_partition(begin, end)
         rel_p = p - begin + 1
-        
         if rel_p==k:
             return p
         elif k < rel_p:
@@ -42,6 +39,5 @@ def kth_smallest(item, k):
 
 if __name__=='__main__':
     item = [1, 124, 12, 23, 2, 43, 12, 243 ,234 ,42, 1,2 ,43 ,23, 523, 232,523, 5,23]
-    
-    print(kth_smallest(item, k=len(item)-1)) # second last smallest element or 2nd largest element
+    print(kth_smallest(item, k=5)) # second last smallest element or 2nd largest element
     print(sorted(item))

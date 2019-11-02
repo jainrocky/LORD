@@ -4,10 +4,7 @@ from binary_heap_tree import BinaryHeapTree
 
 class PriorityQueue(BinaryHeapTree):
     def __init__(self, data=None, priority=None):
-        if priority:
-            super().__init__(data=data, cmp=priority)
-        else:
-            super().__init__(data=data)
+        super().__init__(data=data, cmp=priority)
     def push(self, val):
         self.insert(val)
     def pop(self):
