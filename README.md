@@ -3,7 +3,9 @@
 ## Content
 
 ### Divide & Conquer
+* [randomized_select__kth_smallest_or_largest](/ALGO/divide_and_conquer/dc__randomized_select__kth_smallest_or_largest.py)
 * [merge_sort](/ALGO/sorting/dc__merge_sort.py)
+* [quick_sort](/ALGO/sorting/dc__quick_sort.py)
 
 ### Dynamic Programming
 * [0_1_knapsack](/ALGO/dynamic_programming/dp__0_1_knapsack.py)
