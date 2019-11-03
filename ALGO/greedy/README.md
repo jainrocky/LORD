@@ -15,3 +15,7 @@ Given weights and values of n items, we need to put these items in a knapsack of
 - `n <- Number of elements`
 
 - O(nlog(n))
+
+## Activity Selection Problem
+
+- `O(nlog(n))` Time for sorting(quick_sort)

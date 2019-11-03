@@ -21,9 +21,11 @@
 * [dijkstra__u_to_all_matrix](/ALGO/graph/gy__dijkstra__u_to_all_matrix.py)
 * [kruskal_minimum_spanning_tree](/ALGO/graph/gy__kruskal_minimum_spanning_tree.py)
 * [prims_minimum_spanning_tree](/ALGO/graph/gy__prims_minimum_spanning_tree.py)
+* [activity_selection__problem](/ALGO/greedy/gy__activity_selection__problem.py)
 * [fractional_knapsack](/ALGO/greedy/gy__fractional_knapsack.py)
 * [huffman_encoding](/ALGO/greedy/gy__huffman_encoding.py)
 
 ### Miscellaneous
 * [kmp__pattern_search](/ALGO/pattern_searching/kmp__pattern_search.py)
 * [rabin_karp__pattern_search](/ALGO/pattern_searching/rabin_karp__pattern_search.py)
+* [insertion_sort](/ALGO/sorting/insertion_sort.py)
