@@ -14,8 +14,12 @@ Given weights and values of n items, we need to put these items in a knapsack of
 
 - `n <- Number of elements`
 
-- O(nlog(n))
+- O(nlog(n)) For **pop** elements n times
 
 ## Activity Selection Problem
+
+- `O(nlog(n))` Time for sorting(quick_sort)
+
+## Task Scheduling Problem
 
 - `O(nlog(n))` Time for sorting(quick_sort)

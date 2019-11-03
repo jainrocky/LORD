@@ -24,6 +24,7 @@
 * [activity_selection__problem](/ALGO/greedy/gy__activity_selection__problem.py)
 * [fractional_knapsack](/ALGO/greedy/gy__fractional_knapsack.py)
 * [huffman_encoding](/ALGO/greedy/gy__huffman_encoding.py)
+* [task_scheduling__problem](/ALGO/greedy/gy__task_scheduling__problem.py)
 
 ### Miscellaneous
 * [kmp__pattern_search](/ALGO/pattern_searching/kmp__pattern_search.py)
