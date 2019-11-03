@@ -39,5 +39,5 @@ def kth_smallest(item, k):
 
 if __name__=='__main__':
     item = [1, 124, 12, 23, 2, 43, 12, 243 ,234 ,42, 1,2 ,43 ,23, 523, 232,523, 5,23]
-    print(kth_smallest(item, k=5)) # second last smallest element or 2nd largest element
+    print(kth_smallest(item, k=len(item)-1)) # second last smallest element or 2nd largest element
     print(sorted(item))
