@@ -42,7 +42,7 @@ Key Points:
 - The problem is to find shortest distances between every pair of vertices in a given edge weighted directed Graph.
 - work with negative edges, but doesn't work with negative cycles
 
-* Worst-case `O(V^3)`
+* Worst-case: `O(V^3)`
 * Category: dp
 
 ## gy__prims_minimum_spanning_tree
