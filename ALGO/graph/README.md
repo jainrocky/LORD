@@ -3,7 +3,7 @@
 - V <- Number of Vertices
 - E <- Number of Edges
 
-## Dijkstra's Algorithm
+## gy__dijkstra__u_to_all_matrix
 
 Given a graph and a source vertex in the graph, find shortest paths from source to all vertices in the given graph.
 
@@ -15,15 +15,15 @@ Key Points:
 
 - Not Applicable for negative cost edges
 
-### Using Adjacency matrix
+* Worst-case: `O(n^2)`
+* Category: gy
 
-- `O(V^2)`
+## gy__dijkstra__u_to_all_list
 
-### Using Ajacency list & PriorityQueue(BinaryMinHeap)
+* Worst-case: `O((E+V)log(V))`
+* Category: gy
 
-- `O((E+V)log(V))`
-
-## Bellman-Ford Algorithm
+## dp__bellman_ford__u_to_all_list
 
 Given a graph and a source vertex src in graph, find shortest paths from src to all vertices in the given graph. 
 
@@ -34,20 +34,26 @@ Key Points:
 - work for Graphs with negative weight edges, But doesn't work with negative cycles
 - But time complexity of Bellman-Ford is `O(VE)`, which is more than Dijkstra.
 
-## Floyd Warshall Algorithm
+* Category: dp
+* Worst-case: `O(VE)`
+
+## dp__floyd_warshall__all_pair_shortest_path
 
 - The problem is to find shortest distances between every pair of vertices in a given edge weighted directed Graph.
 - work with negative edges, but doesn't work with negative cycles
 
-- `O(V^3)`
+* Worst-case `O(V^3)`
+* Category: dp
 
-## Prims Minimum spanning tree
+## gy__prims_minimum_spanning_tree
 
 - Given a connected and undirected graph, a spanning tree of that graph is a subgraph that is a tree and connects all the vertices together. 
 - A single graph can have many different spanning trees.
 
-- `O((E+V)log(V))`
+* Worst-case: `O((E+V)log(V))`
+* Category: gy
 
-## Kruskal Minimum spanning tree
+## gy__kruskal_minimum_spanning_tree
 
-- `O(Elog(E))`
+* Worst-case: `O(Elog(E))`
+* Category: gy

@@ -1,6 +1,6 @@
 # Greedy Algorithms
 
-## Fractional knapsack
+## gy__fractional_knapsack
 
 Given weights and values of n items, we need to put these items in a knapsack of capacity W to get the maximum total value in the knapsack.
 
@@ -8,18 +8,23 @@ Given weights and values of n items, we need to put these items in a knapsack of
 
 - `n <- Number of items`
 - `O(n)` if already sorted in non increasing order(by value to weight ratio) else
-- `O(nlog(n))`
+* Worst-case: `O(nlog(n))`
+* Category: gy
 
-## Huffman Encoding
+## gy__huffman_encoding
 
 - `n <- Number of elements`
 
-- O(nlog(n)) For **pop** elements n times
+* Worst-case: O(nlog(n)) (For **pop** elements n times)
+* Category: gy
 
-## Activity Selection Problem
+## gy__activity_selection__problem
 
-- `O(nlog(n))` Time for sorting(quick_sort)
+* Worst-case: `O(nlog(n))` Time for sorting(quick_sort)
+* Category: gy
 
-## Task Scheduling Problem
 
-- `O(nlog(n))` Time for sorting(quick_sort)
+## gy__task_scheduling__problem
+
+* Worst-case: `O(nlog(n))` Time for sorting(quick_sort)
+* Category: gy

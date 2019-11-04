@@ -14,11 +14,11 @@ def minimum_spanning_tree(edges, n_node):
     mst=[]
     i=0
     while len(mst) < n_node-1 and i<n_edges: # while edges not equal to required for mst i.e, (V-1)
-        e =edges[i]
+        e =edges[i] # least cost edge
         i+=1
         u, v = e.uid, e.vid
         par_u, par_v = cache_union[u], cache_union[v]
-        if par_u > 0: # CHECK if it is a child
+        if par_u > 0: # CHECK if it is a child (positive number which is index of there parent, if it is a child)
             while cache_union[par_u] > 0:
                 par_u = cache_union[par_u]
                 cache_union[u] = par_u #to avoid collapsing, direct assign to parent node
@@ -32,12 +32,16 @@ def minimum_spanning_tree(edges, n_node):
         else:
             par_v = v
 
-        ''' if parent of both the vertex is different(or they belongs to different sets)
+        ''' if parent of both the vertex is different(i.e. they belongs to different sets)
             then take union of them, make most negative one(or having greater number of nodes attached)
             as a parent and another one as a child of it.
         '''
         if par_u != par_v:
-            mst.append(e)
+            '''
+            if they are from different set then current edge is not included yet,
+            so include it in mst(bcz it is the least cost edge)
+            '''
+            mst.append(e) 
             if cache_union[par_u] < cache_union[par_v]:
                 cache_union[par_u] += cache_union[par_v]
                 cache_union[par_v] = par_u

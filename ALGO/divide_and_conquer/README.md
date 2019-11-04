@@ -1,8 +1,10 @@
 # Divide & Conquer
 
-## i<sup>th</sup> Order Statistics
+## dc__randomized_select__kth_smallest_or_largest
 
 `n <- length of array`
 
-- worst case `O(n^2)`
-- avg/best `O(n)`
+* Category: dc
+* Worst-case: `O(n^2)`
+* Average-case: `O(n)`
+* Best-case: `O(n)`
