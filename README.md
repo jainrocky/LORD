@@ -3,6 +3,8 @@
 ## Content
 
 ### Divide & Conquer
+* [kth_element_in_linear_time](/ALGO/divide_and_conquer/dc__kth_element_in_linear_time.py)
+* [kth_element_in_linear_time_v2](/ALGO/divide_and_conquer/dc__kth_element_in_linear_time_v2.py)
 * [randomized_select__kth_smallest_or_largest](/ALGO/divide_and_conquer/dc__randomized_select__kth_smallest_or_largest.py)
 * [merge_sort](/ALGO/sorting/dc__merge_sort.py)
 * [quick_sort](/ALGO/sorting/dc__quick_sort.py)
