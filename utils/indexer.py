@@ -36,7 +36,7 @@ if __name__=='__main__':
 
     with open('../README.md', 'r+') as f:
         text = f.read()
-        pattern = '## Content'
+        pattern = '## Algorithms'
         ind = find_all(pattern, text)
         f.seek(ind[0]+len(pattern)+2)
         for k in sorted(algo_content):

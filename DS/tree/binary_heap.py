@@ -1,7 +1,7 @@
 import os, sys, warnings
 import math as mt
 
-class BinaryHeapTree:
+class BinaryHeap:
     def __init__(self, data=None, cmp=None ):
         if cmp is not None:
             self.cmp=cmp
@@ -83,7 +83,7 @@ class BinaryHeapTree:
         
 if __name__=='__main__':
     
-    tree = BinaryHeapTree(cmp=lambda parent, child: parent > child) # Build heap based on **cmp** function condition 
+    tree = BinaryHeap(cmp=lambda parent, child: parent > child) # Build heap based on **cmp** function condition 
     tree.insert(23)
     tree.insert(4)
     tree.insert(42)
@@ -113,14 +113,14 @@ if __name__=='__main__':
                 (123, 12),
                 (213, 4214),
                 (24, 654),]
-        ex1 = BinaryHeapTree(data=data, cmp=lambda a, b: a[1] < b[1])
+        ex1 = BinaryHeap(data=data, cmp=lambda a, b: a[1] < b[1])
         while ex1.exist():
             print(ex1.remove())
 
         print('\nExample-2\n')
         
         data = ['a', 'v', 'd', 'm', 'r', 'c', 'p', 'u', 'e', 'q', 's']
-        ex2 = BinaryHeapTree(data=data)
+        ex2 = BinaryHeap(data=data)
         ex2.insert(val='z')
         ex2.insert(val='b')
         ex2.insert(val='y')

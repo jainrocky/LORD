@@ -31,3 +31,9 @@
 - build-time `O(n)`
 - insert `O(log(n))` and `O(n)` if resize
 - remove `O(log(n))`
+
+
+## BinomialHeapTree
+
+- insert `O(log(n))`
+- remove `O(log(n))`

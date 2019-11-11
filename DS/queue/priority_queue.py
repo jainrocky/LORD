@@ -1,8 +1,8 @@
 import os, sys, warnings
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'tree'))
-from binary_heap_tree import BinaryHeapTree
+from binary_heap import BinaryHeap
 
-class PriorityQueue(BinaryHeapTree):
+class PriorityQueue(BinaryHeap):
     def __init__(self, data=None, priority=None):
         super().__init__(data=data, cmp=priority)
     def push(self, val):
