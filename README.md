@@ -9,7 +9,8 @@
 * [binomial_heap](/DS/tree/binomial_heap.py)
 
 
-## A
+## Algorithms
+
 
 ### Divide & Conquer
 * [kth_element_in_linear_time](/ALGO/divide_and_conquer/dc__kth_element_in_linear_time.py)
@@ -17,6 +18,7 @@
 * [randomized_select__kth_smallest_or_largest](/ALGO/divide_and_conquer/dc__randomized_select__kth_smallest_or_largest.py)
 * [merge_sort](/ALGO/sorting/dc__merge_sort.py)
 * [quick_sort](/ALGO/sorting/dc__quick_sort.py)
+* [quick_sort_iter](/ALGO/sorting/dc__quick_sort_iter.py)
 
 ### Dynamic Programming
 * [0_1_knapsack](/ALGO/dynamic_programming/dp__0_1_knapsack.py)

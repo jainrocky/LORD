@@ -20,6 +20,17 @@
 * Worst-case: `O(n^2)` when already sorted with opposite `condition`
 * Category: dc
 
+## dc__quick_sort_iter
+
+* no recursion depth problem
+* [x] in-place
+* [ ] stable (un-stable, even if we check for equality)
+* Best-case: `O(nlog(n))`
+* Average-case: `O(nlog(n))`
+* Worst-case: `O(n^2)` when already sorted with opposite `condition`
+* Category: dc
+
+
 ## insertion_sort
 
 * [x] in-place

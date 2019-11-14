@@ -38,7 +38,7 @@ if __name__=='__main__':
         text = f.read()
         pattern = '## Algorithms'
         ind = find_all(pattern, text)
-        f.seek(ind[0]+len(pattern)+2)
+        f.seek(ind[0]+2*len(pattern))
         for k in sorted(algo_content):
             f.write('\n\n### '+algo_chart[k])
             for name in algo_content[k]:
