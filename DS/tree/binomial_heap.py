@@ -9,7 +9,7 @@ class BinomialHeap():
             self.child=None
             self.deg=0
         def __str__(self):
-            return '({}, {})'.format(self.key, self.deg)
+            return '[key={}, deg={}]'.format(self.key, self.deg)
 
     def __init__(self, data=None, condition=None):
         self.heap=None
@@ -45,9 +45,42 @@ class BinomialHeap():
         self.merge( rm_childs )
         return removed.key
         
-    
-    def exist(self):
-        return len(self.heap)>0
+    def update(self, old_key, new_key):
+        match_node = None
+        for node in self.heap:
+            match_node= self._find(node, old_key)
+            if match_node is not None:
+                break
+        if match_node is not None:
+            match_node.key = new_key
+            parent = match_node.par
+            child = match_node
+            while parent is not None and child is not None and not self.condition(parent.key, child.key):
+                parent.key, child.key = child.key, parent.key
+                child, parent = parent, parent.par
+            parent = match_node
+            child = parent.child
+            while parent is not None and child is not None and not self.condition(parent.key, child.key):
+                while child.sib is not None and not self.condition(child.key, child.sib.key):
+                    child = child.sib
+                parent.key, child.key = child.key, parent.key
+                parent, child = child, child.child
+        else:
+            print('Key not found!')
+
+    def delete(self, key):
+        self.update( old_key=key, new_key=2**31 )
+        self.remove(  )
+            
+    def _find(self, node, key, msg=None):
+        if node is not None:
+            if node.key == key:
+                return node
+            m = self._find(node.child, key, msg='child')
+            if m is not None:
+                return m
+            return self._find(node.sib, key, 'sib')
+        return None
 
     def insert_by_order(self, target):
         temp = []
@@ -70,10 +103,10 @@ class BinomialHeap():
         self.heap=temp
 
     def merge(self, target):
+        if isinstance(target, BinomialHeap):
+            target = target.heap
         self.insert_by_order(target)
-        f = 0 #pointing to 1st smallest binomial tree 
-        s = 1 #pointing to 2nd smallest binomial tree 
-        t = 2 #pointing to 3rd smallest binomial tree
+        f, s, t = 0, 1, 2 #pointing to 1st smallest binomial tree, pointing to 2nd smallest binomial tree, pointing to 3rd smallest binomial tree
         while f < len(self.heap):
             if s >= len(self.heap):
                 break
@@ -92,7 +125,8 @@ class BinomialHeap():
                 self.heap[f].deg += 1
                 del self.heap[s] #O(log(n)) <<- length of self.heap array
 
-                    
+    def exist(self):
+        return len(self.heap)>0      
     def print(self):
         def _print(node):
             print(node)
@@ -107,31 +141,44 @@ class BinomialHeap():
 
 
 if __name__=='__main__':
-    bh = BinomialHeap(condition=lambda a, b: a>b)
+    bh = BinomialHeap(condition=lambda a, b: a < b)
     for i in range(50, 0, -1):
         bh.insert(i)
+    bh.update(49, -99)
+    bh.update(23, 99)
+    bh.update(1, -10)
     
     while bh.exist():
         print(bh.remove(), end=' ')
-    print()
-    print()
+    print('\n')
 
-    # priority example
-    bh2 = BinomialHeap(data=[(12, 124),
-                             (41, 121),
-                             (123, 214),
-                             (213, 14532),
-                             (4312, 35),
-                             (1, 2),
-                             (21, 14),
-                             (124, 12)], condition=lambda a, b: a[1] > b[1])
-    
-    bh2.insert((14124, 124125))
-    bh2.insert((23, 532))
-    bh2.insert((523, 574))
-    while bh2.exist():
-        print(bh2.remove(), end=' ')
-    
+    more = True
+    if more:
+        #priority example
+        bh2 = BinomialHeap(data=[(12, 124),
+                                 (41, 121),
+                                 (23, 532),
+                                 (123, 214),
+                                 (213, 14532),
+                                 (4312, 35),
+                                 (1, 2),
+                                 (21, 14),
+                                 (124, 12)], condition=lambda a, b: a[1] > b[1])
+        bh2.insert((14124, 124125))
+        bh2.insert((23, 532))
+        bh2.insert((523, 574))
+        bh2.update((23, 532), (1240, 120))
+        while bh2.exist():
+            print(bh2.remove(), end=' ')
+
+        #MERGE TWO BH
+        print('\n')
+        b1 = BinomialHeap(data=list(range(1, 101, 3)))
+        b2 = BinomialHeap(data=list(range(101, 201, 2)))
+        b2.merge(b1)
+        while b2.exist():
+            print(b2.remove(), end=' ')
+
 
 
 
