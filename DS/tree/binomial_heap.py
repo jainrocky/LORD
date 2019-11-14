@@ -20,6 +20,7 @@ class BinomialHeap():
             for val in data:
                 self.insert(val)
 
+    #insert: O(log(n))
     def insert(self, val):
         self.merge([self.Node(k=val)])
             
@@ -44,8 +45,9 @@ class BinomialHeap():
             rm_childs.append(t)
         self.merge( rm_childs )
         return removed.key
-        
-    def update(self, old_key, new_key):
+    
+    #update: O(n) bcz finding the key tooks atmost O(n) time after than heapify it took O(log(n))
+    def update(self, old_key, new_key): 
         match_node = None
         for node in self.heap:
             match_node= self._find(node, old_key)
@@ -69,6 +71,8 @@ class BinomialHeap():
             print('Key not found!')
 
     def delete(self, key):
+        # need to be generalize
+        # work for only integer list and for max heap only
         self.update( old_key=key, new_key=2**31 )
         self.remove(  )
             
@@ -173,8 +177,8 @@ if __name__=='__main__':
 
         #MERGE TWO BH
         print('\n')
-        b1 = BinomialHeap(data=list(range(1, 101, 3)))
-        b2 = BinomialHeap(data=list(range(101, 201, 2)))
+        b1 = BinomialHeap(data=list(range(1, 1001, 3)))
+        b2 = BinomialHeap(data=list(range(101, 2001, 2)))
         b2.merge(b1)
         while b2.exist():
             print(b2.remove(), end=' ')

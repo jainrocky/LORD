@@ -3,41 +3,35 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..', 'utils'))
 from sorting_visualise import vis
 
 
-def insertion_sort(item, begin, end, visualise=None, condition=None):
+def selection_sort(item, begin, end, visualise=None, condition=None):
     if condition is None:
-        condition=lambda first, second: first < second
+        condition = lambda a, b: a<b
     if visualise:
         warnings.warn('Visualise, required extra Modules such as numpy and matplotlib and OpenCV')
         if not isinstance(item[begin], (int, float, str)):
             raise ValueError("visualise is valid only for 'int', 'float', 'str' not for {}".format(type(item[begin])))
         
-    i=j=begin
-    while i <= end:
-        j=i
-        k=item[i]
-        while j > begin and not condition( item[j-1], k ):
-            item[j] = item[j-1]
-            j -= 1
-        item[j] = k
+    for i in range(begin, end):
+        min_idx = i
+        for j in range(i+1, end+1):
+            if not condition(item[min_idx],  item[j]):
+                min_idx=j
+        item[i], item[min_idx] = item[min_idx], item[i]
         if visualise:
-            vis(item, 'Selection Sort', j)
-        i+=1
-        
+            vis(item, 'Selection Sort', min_idx)
     # final-sorted
     if visualise:
             vis(item, 'Selection Sort')
 
-    
-
 if __name__=='__main__':
-    
     n = 100
     item=[None]*n
     for i in range(n):
         item[i] = random.random()*100
-    insertion_sort(item, begin=0, end=len(item)-1, visualise=True)
+    selection_sort(item, begin=0, end=len(item)-1, visualise=True)
+    
 
-    more = False
+    more=False
     if more:
         item2 = [(314, 214),
                 (2141, 4),
@@ -47,5 +41,5 @@ if __name__=='__main__':
                 (4124, 414),
                 (24124, 4),]
         print(item2)
-        insertion_sort(item2, begin=0, end=len(item2)-1, condition = lambda a, b: a[1] >= b[1])
+        selection_sort(item2, begin=0, end=len(item2)-1, condition = lambda a, b: a[1] >= b[1])
         print(item2)
