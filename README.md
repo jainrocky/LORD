@@ -9,7 +9,7 @@
 * [binomial_heap](/DS/tree/binomial_heap.py)
 
 
-## Algorithms
+## A
 
 ### Divide & Conquer
 * [kth_element_in_linear_time](/ALGO/divide_and_conquer/dc__kth_element_in_linear_time.py)
@@ -40,4 +40,6 @@
 ### Miscellaneous
 * [kmp__pattern_search](/ALGO/pattern_searching/kmp__pattern_search.py)
 * [rabin_karp__pattern_search](/ALGO/pattern_searching/rabin_karp__pattern_search.py)
+* [bubble_sort](/ALGO/sorting/bubble_sort.py)
 * [insertion_sort](/ALGO/sorting/insertion_sort.py)
+* [selection_sort](/ALGO/sorting/selection_sort.py)

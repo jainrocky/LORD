@@ -41,3 +41,16 @@ if __name__=='__main__':
     for i in range(n):
         item[i] = random.random()*100
     quick_sort(item, 0, len(item)-1, visualise=True, condition=lambda first, second: first > second)
+    
+    more = False
+    if more:
+        item2 = [(314, 214),
+                (2141, 4),
+                (1242, 124),
+                (421, 124),
+                (411, 4),
+                (4124, 414),
+                (24124, 4),]
+        print(item2)
+        quick_sort(item2, begin=0, end=len(item2)-1, condition = lambda a, b: a[1] > b[1])
+        print(item2)
