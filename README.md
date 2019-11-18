@@ -46,4 +46,5 @@
 * [bubble_sort](/ALGO/sorting/bubble_sort.py)
 * [counting_sort](/ALGO/sorting/counting_sort.py)
 * [insertion_sort](/ALGO/sorting/insertion_sort.py)
+* [radix_sort](/ALGO/sorting/radix_sort.py)
 * [selection_sort](/ALGO/sorting/selection_sort.py)

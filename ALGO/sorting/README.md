@@ -1,6 +1,8 @@
 # Sorting Algorithms
 
 - `n <- len(array)`
+- `r <- range of keys`(i.e, max(key)-min(key)+1)
+- `b <- base`
 
 ## dc__merge_sort
 
@@ -72,3 +74,22 @@ now repeat this process for index `1` then for index `2` and so on till the n-2
 * Best-case: `O(n^2)`
 * Average-case: `O(n^2)`
 * Worst-case: `O(n^2)`
+
+## counting_sort
+
+* Non-comparision sorting
+* [ ] in-place
+* [x] stable
+* Best-case: `O(n+r)`
+* Average-case: `O(n+r)`
+* Worst-case: `O(n+r)`
+
+## radix_sort
+
+* Non-comparision sorting
+* [ ] in-place
+* [x] stable
+* Best-case: O( (n+b)*log<sub>b</sub>(r) )
+* Average-case: O( (n+b)*log<sub>b</sub>(r) )
+* Worst-case: O( (n+b)*log<sub>b</sub>(r) )
+
