@@ -17,6 +17,7 @@
 * [kth_element_in_linear_time_v2](/ALGO/divide_and_conquer/dc__kth_element_in_linear_time_v2.py)
 * [randomized_select__kth_smallest_or_largest](/ALGO/divide_and_conquer/dc__randomized_select__kth_smallest_or_largest.py)
 * [merge_sort](/ALGO/sorting/dc__merge_sort.py)
+* [merge_sort_iter](/ALGO/sorting/dc__merge_sort_iter.py)
 * [quick_sort](/ALGO/sorting/dc__quick_sort.py)
 * [quick_sort_iter](/ALGO/sorting/dc__quick_sort_iter.py)
 
@@ -43,5 +44,6 @@
 * [kmp__pattern_search](/ALGO/pattern_searching/kmp__pattern_search.py)
 * [rabin_karp__pattern_search](/ALGO/pattern_searching/rabin_karp__pattern_search.py)
 * [bubble_sort](/ALGO/sorting/bubble_sort.py)
+* [counting_sort](/ALGO/sorting/counting_sort.py)
 * [insertion_sort](/ALGO/sorting/insertion_sort.py)
 * [selection_sort](/ALGO/sorting/selection_sort.py)

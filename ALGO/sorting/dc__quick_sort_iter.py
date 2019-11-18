@@ -2,6 +2,7 @@ import os, sys, warnings, random
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..', 'utils'))
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..', 'DS', 'stack'))
 from sorting_visualise import vis
+
 from stack import Stack
 
 def quick_sort(item, begin, end, visualise=None, condition=None):
