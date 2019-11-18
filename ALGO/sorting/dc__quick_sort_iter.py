@@ -5,8 +5,13 @@ from sorting_visualise import vis
 from stack import Stack
 
 def quick_sort(item, begin, end, visualise=None, condition=None):
+            
     if condition is None:
-        condition=lambda a, b: a<b
+        condition=lambda first, second: first <= second # equality must be checked other wise un-stablity happens
+    if visualise:
+        warnings.warn('Visualise, required extra Modules such as numpy and matplotlib and OpenCV')
+        if not isinstance(item[begin], (int, float, str)):
+            raise ValueError("visualise is valid only for 'int', 'float', 'str' not for {}".format(type(item[begin])))
         
     def partition(begin, end):
         pivot = end
@@ -23,7 +28,7 @@ def quick_sort(item, begin, end, visualise=None, condition=None):
         return j
     s = Stack()
     s.push((begin, end))
-    
+
     while not s.empty():# <= log(end-begin+1)
         l, h = s.pop()
         p = partition(l, h)

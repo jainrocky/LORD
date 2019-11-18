@@ -11,6 +11,17 @@
 * Best-case: `O(nlog(n))`
 * Category: dc
 
+## dc__merge_sort_iter
+
+* no recursion depth problem
+* [ ] in-place
+* [x] stable (used equal operator with less or greater operator when comparing otherwise it tends to un-stable)
+* Worst-case: `O(nlog(n))`
+* Average-case: `O(nlog(n))`
+* Best-case: `O(nlog(n))`
+* Category: dc
+
+
 ## dc__quick_sort
 
 * [x] in-place
