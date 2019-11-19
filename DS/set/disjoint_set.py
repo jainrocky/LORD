@@ -28,7 +28,7 @@ if __name__=='__main__':
     n=6
     djs = DJSet(n)
     print(djs.find(2))
+    print(djs.find(5))
     djs.union(2, 5)
-    djs.union(2, 2)
     print(djs.find(5))
         

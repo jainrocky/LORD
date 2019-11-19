@@ -44,6 +44,7 @@
 * [kmp__pattern_search](/ALGO/pattern_searching/kmp__pattern_search.py)
 * [rabin_karp__pattern_search](/ALGO/pattern_searching/rabin_karp__pattern_search.py)
 * [bubble_sort](/ALGO/sorting/bubble_sort.py)
+* [bucket_sort](/ALGO/sorting/bucket_sort.py)
 * [counting_sort](/ALGO/sorting/counting_sort.py)
 * [insertion_sort](/ALGO/sorting/insertion_sort.py)
 * [radix_sort](/ALGO/sorting/radix_sort.py)
