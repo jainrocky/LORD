@@ -93,3 +93,20 @@ now repeat this process for index `1` then for index `2` and so on till the n-2
 * Average-case: O( (n+b)*log<sub>b</sub>(r) )
 * Worst-case: O( (n+b)*log<sub>b</sub>(r) )
 
+## shell_sort
+
+* [x] in-place
+* [ ] stable
+* Best-case: `O(nlog(n))`
+* Average-case: -  
+* Worst-case:  `O(n^2)`
+
+## bucket_sort
+
+* [ ] in-place
+* [x] stable
+* Best-case: -
+* Average-case: `O(n+r)`  
+* Worst-case:  `O(r*(n^2))`
+
+

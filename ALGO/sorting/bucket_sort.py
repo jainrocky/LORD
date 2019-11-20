@@ -4,22 +4,27 @@ from insertion_sort import insertion_sort
 def bucket_sort(item, begin, end, key=None):
     if key is None:
         key = lambda x: x[0] if isinstance(x, (list, tuple, ) ) else x
-    size = end-begin+1
-    buckets=[None]*size
+    size    = end-begin+1
+    buckets = [None]*size
     i=begin
+    
     while i<=end:
-        if buckets[ int( size * key(item[i]) ) ] is None:
-            buckets[ int( size * key(item[i]) ) ] = [item[i]]
+        if  buckets[ int( size * key(item[i]) ) ] is None:
+            buckets[ int( size * key(item[i]) ) ]=[item[i]]
         else:
             buckets[ int( size * key(item[i]) ) ].append(item[i])
         i+=1
+        
     i=0
     while i<size:
         if buckets[i] is not None:
-            insertion_sort(buckets[i], 0, len(buckets[i])-1, condition=lambda a, b: key(a) <= key(b)) # equality must be check for stable sorting
+            insertion_sort(buckets[i],
+                           0,
+                           len(buckets[i])-1,
+                           condition=lambda a, b: key(a) <= key(b)) # equality must be check for stable sorting
         i+=1
+
     i=0
-    
     for bucket in buckets:
         if bucket is not None:
             for e in bucket:
