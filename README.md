@@ -41,6 +41,8 @@
 * [task_scheduling__problem](/ALGO/greedy/gy__task_scheduling__problem.py)
 
 ### Miscellaneous
+* [bfs](/ALGO/graph/bfs.py)
+* [dfs](/ALGO/graph/dfs.py)
 * [kmp__pattern_search](/ALGO/pattern_searching/kmp__pattern_search.py)
 * [rabin_karp__pattern_search](/ALGO/pattern_searching/rabin_karp__pattern_search.py)
 * [bubble_sort](/ALGO/sorting/bubble_sort.py)

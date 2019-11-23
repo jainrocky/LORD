@@ -3,7 +3,7 @@ inf = 2**31
 
 class Graph:
     class Edge:
-        def __init__(self, u, v, w=inf):
+        def __init__(self, u, v, w=1):
             self.uid, self.vid, self.weight = u, v, w
         def __str__(self):
             return str(self.uid)+'__'+str(self.weight)+'__'+str(self.vid)
@@ -21,7 +21,7 @@ class Graph:
         if self.adjacency == 'matrix':
             self.matrix = [[inf] * self.n_node for i in range(self.n_node)]
             for i in range(self.n_node):
-                self.matrix[i][i]=0
+                self.matrix[i][i]=1
         elif self.adjacency == 'list':
             self.list = [[]] * self.n_node
         else:
