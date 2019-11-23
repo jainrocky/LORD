@@ -87,6 +87,7 @@ now repeat this process for index `1` then for index `2` and so on till the n-2
 ## radix_sort
 
 * Non-comparision sorting
+* based on counting sort
 * [ ] in-place
 * [x] stable
 * Best-case: O( (n+b)*log<sub>b</sub>(r) )
@@ -95,6 +96,7 @@ now repeat this process for index `1` then for index `2` and so on till the n-2
 
 ## shell_sort
 
+* modification of insertion sort
 * [x] in-place
 * [ ] stable
 * Best-case: `O(nlog(n))`
@@ -103,6 +105,7 @@ now repeat this process for index `1` then for index `2` and so on till the n-2
 
 ## bucket_sort
 
+* based on insertion sort
 * [ ] in-place
 * [x] stable
 * Best-case: -
